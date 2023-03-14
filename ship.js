@@ -1,6 +1,7 @@
 
-const Ship = (name, length, health = length,sunk = false, x, y) => {
+const Ship = (name, length, x, y, health = length,sunk = false) => {
     
+
     const damage = x => {
       return health -= x;
       };
@@ -9,16 +10,15 @@ const Ship = (name, length, health = length,sunk = false, x, y) => {
     {return sunk = true}
 else{ return sunk}}
   
-
-    return { name, length, health, damage, isSunk};
+    return {name, length, health, x, y, damage, isSunk};
   };
   
   
   
 
 
-module.exports = Ship
 
+export { Ship }
 
 
 
