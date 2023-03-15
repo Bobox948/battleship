@@ -36,8 +36,12 @@ Game()
 
 
 })
-
+let boat;
 let boat2;
+let submarine;
+let submarine2;
+let cruiser;
+let cruiser2;
 
 function Game(){
 
@@ -57,10 +61,10 @@ function Game(){
 
 
    
-const boat = Gameboard('boat', 4, random2, random1)
-const submarine = Gameboard('submarine', 3, random4, random3)
+ boat = Gameboard('boat', 4, random2, random1)
+ submarine = Gameboard('submarine', 3, random4, random3)
 
-const cruiser = Gameboard('cruiser', 2, random6, random5)
+cruiser = Gameboard('cruiser', 2, random6, random5)
 
 var first = document.querySelector(`.c${random2}${random1}`)
 var first1 = document.querySelector(`.c${random2}${random1+1}`)
@@ -98,9 +102,9 @@ var random11 = Math.floor(Math.random() * (8 - 0 + 1) + 0)
 var random12 = Math.floor(Math.random() * (9 - 7 + 1) + 7)
 
 boat2 = Gameboard('boat', 4, random8, random7)
-const submarine2 = Gameboard('submarine', 3, random10, random9)
+ submarine2 = Gameboard('submarine', 3, random10, random9)
 
-const cruiser2 = Gameboard('cruiser', 2, random12, random11)
+ cruiser2 = Gameboard('cruiser', 2, random12, random11)
 var first2 = document.querySelector(`.d${random8}${random7}`)
 var first21 = document.querySelector(`.d${random8}${random7+1}`)
 var first22 = document.querySelector(`.d${random8}${random7+2}`)
@@ -113,17 +117,17 @@ var second22 = document.querySelector(`.d${random10}${random9+2}`)
 var third2 = document.querySelector(`.d${random12}${random11}`)
 var third21 = document.querySelector(`.d${random12}${random11+1}`)
 
-first2.innerHTML = "B"
-first21.innerHTML = "B"
-first22.innerHTML = "B"
-first23.innerHTML = "B"
+first2.innerHTML = "B."
+first21.innerHTML = "B."
+first22.innerHTML = "B."
+first23.innerHTML = "B."
 
-second2.innerHTML = "S"
-second21.innerHTML = "S"
-second22.innerHTML = "S"
+second2.innerHTML = "S."
+second21.innerHTML = "S."
+second22.innerHTML = "S."
 
-third2.innerHTML = "C"
-third21.innerHTML = "C"
+third2.innerHTML = "C."
+third21.innerHTML = "C."
 
 }
 
@@ -136,13 +140,222 @@ var x = parseInt(clickval2.substring(1,2))
 var y = parseInt(clickval2.substring(2,3))
 
 
-if (clickval === 'B')
+if (clickval === 'B.')
 {
-    boat2.receiveAttack(x, y)
+   // boat2.ship.health = boat2.ship.health-1
+
+   boat2.ship.damage(1);
+   this.innerHTML = 'X'
+   this.style.color = 'red';
+   var random13 = Math.floor(Math.random() * 10)
+    var random14 = Math.floor(Math.random() * 10)
+
+    var shot = document.querySelector(`.c${random13}${random14}`)
+
+    if (shot.innerHTML == 'B')
+   { 
+    
+    setTimeout(() => {
+        shot.innerHTML = 'X'
+    shot.style.color = 'red';
+    boat.ship.damage(1)
+       }, 500);
+   }
+    else if (shot.innerHTML == 'S')
+       {
+        setTimeout(() => {
+            shot.innerHTML = 'X'
+        shot.style.color = 'red';
+        submarine.ship.damage(1)
+           }, 500);
+
+
+       }
+    else if (shot.innerHTML == 'C')
+    {
+        setTimeout(() => {
+            shot.innerHTML = 'X'
+        shot.style.color = 'red';
+        cruiser.ship.damage(1)
+           }, 500);
+
+    }
+
+    else{
+
+        setTimeout(() => {
+            shot.innerHTML = '.'
+       
+           }, 500);
+    }
+ 
+
+
 }
 
-console.log(boat2)
 
+
+else if (clickval == 'S.')
+{
+    submarine2.ship.damage(1);
+    this.innerHTML = 'X'
+    this.style.color = 'red';
+
+    var random13 = Math.floor(Math.random() * 10)
+    var random14 = Math.floor(Math.random() * 10)
+
+    var shot = document.querySelector(`.c${random13}${random14}`)
+
+    if (shot.innerHTML == 'B')
+   { 
+    
+    setTimeout(() => {
+        shot.innerHTML = 'X'
+    shot.style.color = 'red';
+    boat.ship.damage(1)
+       }, 500);
+   }
+    else if (shot.innerHTML == 'S')
+       {
+        setTimeout(() => {
+            shot.innerHTML = 'X'
+        shot.style.color = 'red';
+        submarine.ship.damage(1)
+           }, 500);
+
+
+       }
+    else if (shot.innerHTML == 'C')
+    {
+        setTimeout(() => {
+            shot.innerHTML = 'X'
+        shot.style.color = 'red';
+        cruiser.ship.damage(1)
+           }, 500);
+
+    }
+
+    else{
+
+        setTimeout(() => {
+            shot.innerHTML = '.'
+       
+           }, 500);    }
+ 
+
+
+}
+else if (clickval == 'C.')
+{
+    cruiser2.ship.damage(1);
+    this.innerHTML = 'X'
+    this.style.color = 'red';
+    var random13 = Math.floor(Math.random() * 10)
+    var random14 = Math.floor(Math.random() * 10)
+
+    var shot = document.querySelector(`.c${random13}${random14}`)
+
+    if (shot.innerHTML == 'B')
+   { 
+    
+    setTimeout(() => {
+        shot.innerHTML = 'X'
+    shot.style.color = 'red';
+    boat.ship.damage(1)
+       }, 500);
+   }
+    else if (shot.innerHTML == 'S')
+       {
+        setTimeout(() => {
+            shot.innerHTML = 'X'
+        shot.style.color = 'red';
+        submarine.ship.damage(1)
+           }, 500);
+
+
+       }
+    else if (shot.innerHTML == 'C')
+    {
+        setTimeout(() => {
+            shot.innerHTML = 'X'
+        shot.style.color = 'red';
+        cruiser.ship.damage(1)
+           }, 500);
+
+    }
+
+    else{
+
+        setTimeout(() => {
+            shot.innerHTML = '.'
+       
+           }, 500);    }
+ 
+
+
+}
+else {
+    this.innerHTML = "."
+    this.style.color = 'black';
+    var random13 = Math.floor(Math.random() * 10)
+    var random14 = Math.floor(Math.random() * 10)
+
+    var shot = document.querySelector(`.c${random13}${random14}`)
+
+    if (shot.innerHTML == 'B')
+   { 
+    
+    setTimeout(() => {
+        shot.innerHTML = 'X'
+    shot.style.color = 'red';
+    boat.ship.damage(1)
+       }, 500);
+   }
+    else if (shot.innerHTML == 'S')
+       {
+        setTimeout(() => {
+            shot.innerHTML = 'X'
+        shot.style.color = 'red';
+        submarine.ship.damage(1)
+           }, 500);
+
+
+       }
+    else if (shot.innerHTML == 'C')
+    {
+        setTimeout(() => {
+            shot.innerHTML = 'X'
+        shot.style.color = 'red';
+        cruiser.ship.damage(1)
+           }, 500);
+
+    }
+
+    else{
+
+        setTimeout(() => {
+            shot.innerHTML = '.'
+       
+           }, 500);    }
+ 
+
+}
+
+var score = document.querySelector('.score')
+
+if (boat2.ship.damage(0) == 0 && submarine2.ship.damage(0) == 0 && cruiser2.ship.damage(0) == 0 )
+{
+
+    setTimeout(() => {
+alert("you won")      }, 500);
+}
+else if (boat.ship.damage(0) == 0 && submarine.ship.damage(0) == 0 && cruiser.ship.damage(0) == 0)
+
+{
+
+setTimeout(() => {
+    alert("you lost")  }, 500);
+}
 }
 
 

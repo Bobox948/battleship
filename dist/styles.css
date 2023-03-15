@@ -33,7 +33,9 @@ div[class^='c'], div[class*=' c']{
     border: solid
 }
 div[class^='d'], div[class*=' d']{
-    border: solid
+    border: solid;
+    border-color: black;
+    color: lightseagreen;
 }
 
 .mid{

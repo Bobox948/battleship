@@ -21,19 +21,19 @@ if (x == ship.x && y == ship.y)
   return true
 }
 
-else if (x == ship.x+1 && y == ship.y)
+else if (x == ship.x && y == ship.y+1)
 
 {
   ship.damage(1)
   return true
 }
-else if ((ship.name == 'cruiser' || ship.name == 'submarine') && x == ship.x+2 && y == ship.y)
+else if ((ship.name == 'cruiser' || ship.name == 'submarine') && x == ship.x && y == ship.y+2)
 
 {
   ship.damage(1)
   return true
 }
-else if (ship.name == 'cruiser' && x == ship.x+3 && y == ship.y)
+else if (ship.name == 'cruiser' && x == ship.x && y == ship.y+3)
 
 {
   ship.damage(1)
@@ -52,13 +52,6 @@ else
 
 
 }
-
-
-
-
-
-
-
 
 
     return{missed, receiveAttack, ship};
