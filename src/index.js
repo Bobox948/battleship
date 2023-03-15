@@ -132,6 +132,8 @@ third21.innerHTML = "C."
 }
 
 function Attack(e){
+
+    
     var clickval = e.target.innerHTML
     var clickval2 = e.target.classList.value
 
@@ -180,6 +182,57 @@ if (clickval === 'B.')
            }, 500);
 
     }
+
+    else if (shot.innerHTML == '.' || shot.innerHTML == 'X')
+{
+    
+    var random13 = Math.floor(Math.random() * 10)
+    var random14 = Math.floor(Math.random() * 10)
+
+    var shot = document.querySelector(`.c${random13}${random14}`)
+
+    if (shot.innerHTML == 'B')
+   { 
+    
+    setTimeout(() => {
+        shot.innerHTML = 'X'
+    shot.style.color = 'red';
+    boat.ship.damage(1)
+       }, 500);
+   }
+    else if (shot.innerHTML == 'S')
+       {
+        setTimeout(() => {
+            shot.innerHTML = 'X'
+        shot.style.color = 'red';
+        submarine.ship.damage(1)
+           }, 500);
+
+
+       }
+    else if (shot.innerHTML == 'C')
+    {
+        setTimeout(() => {
+            shot.innerHTML = 'X'
+        shot.style.color = 'red';
+        cruiser.ship.damage(1)
+           }, 500);
+
+
+    }
+
+    else if (shot.innerHTML == 'X')
+
+    { shot.innerHTML='X'}
+
+    else{
+
+        setTimeout(() => {
+            shot.innerHTML = '.'
+       
+           }, 500);    }
+
+        }
 
     else{
 
@@ -234,7 +287,56 @@ else if (clickval == 'S.')
            }, 500);
 
     }
-
+    else if (shot.innerHTML == '.' || shot.innerHTML == 'X')
+    {
+        
+        var random13 = Math.floor(Math.random() * 10)
+        var random14 = Math.floor(Math.random() * 10)
+    
+        var shot = document.querySelector(`.c${random13}${random14}`)
+    
+        if (shot.innerHTML == 'B')
+       { 
+        
+        setTimeout(() => {
+            shot.innerHTML = 'X'
+        shot.style.color = 'red';
+        boat.ship.damage(1)
+           }, 500);
+       }
+        else if (shot.innerHTML == 'S')
+           {
+            setTimeout(() => {
+                shot.innerHTML = 'X'
+            shot.style.color = 'red';
+            submarine.ship.damage(1)
+               }, 500);
+    
+    
+           }
+        else if (shot.innerHTML == 'C')
+        {
+            setTimeout(() => {
+                shot.innerHTML = 'X'
+            shot.style.color = 'red';
+            cruiser.ship.damage(1)
+               }, 500);
+    
+    
+        }
+    
+        else if (shot.innerHTML == 'X')
+    
+        { shot.innerHTML='X'}
+    
+        else{
+    
+            setTimeout(() => {
+                shot.innerHTML = '.'
+           
+               }, 500);    }
+    
+            }
     else{
 
         setTimeout(() => {
@@ -283,7 +385,56 @@ else if (clickval == 'C.')
            }, 500);
 
     }
-
+    else if (shot.innerHTML == '.' || shot.innerHTML == 'X')
+    {
+        
+        var random13 = Math.floor(Math.random() * 10)
+        var random14 = Math.floor(Math.random() * 10)
+    
+        var shot = document.querySelector(`.c${random13}${random14}`)
+    
+        if (shot.innerHTML == 'B')
+       { 
+        
+        setTimeout(() => {
+            shot.innerHTML = 'X'
+        shot.style.color = 'red';
+        boat.ship.damage(1)
+           }, 500);
+       }
+        else if (shot.innerHTML == 'S')
+           {
+            setTimeout(() => {
+                shot.innerHTML = 'X'
+            shot.style.color = 'red';
+            submarine.ship.damage(1)
+               }, 500);
+    
+    
+           }
+        else if (shot.innerHTML == 'C')
+        {
+            setTimeout(() => {
+                shot.innerHTML = 'X'
+            shot.style.color = 'red';
+            cruiser.ship.damage(1)
+               }, 500);
+    
+    
+        }
+    
+        else if (shot.innerHTML == 'X')
+    
+        { shot.innerHTML='X'}
+    
+        else{
+    
+            setTimeout(() => {
+                shot.innerHTML = '.'
+           
+               }, 500);    }
+    
+            }
     else{
 
         setTimeout(() => {
@@ -330,6 +481,57 @@ else {
            }, 500);
 
     }
+    else if (shot.innerHTML == '.' || shot.innerHTML == 'X')
+    {
+        
+        var random13 = Math.floor(Math.random() * 10)
+        var random14 = Math.floor(Math.random() * 10)
+    
+        var shot = document.querySelector(`.c${random13}${random14}`)
+    
+        if (shot.innerHTML == 'B')
+       { 
+        
+        setTimeout(() => {
+            shot.innerHTML = 'X'
+        shot.style.color = 'red';
+        boat.ship.damage(1)
+           }, 500);
+       }
+        else if (shot.innerHTML == 'S')
+           {
+            setTimeout(() => {
+                shot.innerHTML = 'X'
+            shot.style.color = 'red';
+            submarine.ship.damage(1)
+               }, 500);
+    
+    
+           }
+        else if (shot.innerHTML == 'C')
+        {
+            setTimeout(() => {
+                shot.innerHTML = 'X'
+            shot.style.color = 'red';
+            cruiser.ship.damage(1)
+               }, 500);
+
+    
+        }
+
+        else if (shot.innerHTML == 'X')
+
+        { shot.innerHTML='X'}
+
+        else{
+
+            setTimeout(() => {
+                shot.innerHTML = '.'
+           
+               }, 500);    }
+     
+    
+    }
 
     else{
 
@@ -358,7 +560,9 @@ setTimeout(() => {
 }
 }
 
-
+// créer une array shots, et après chaque coup ou miss on push dedans, 
+// et après boucle while, tant que les coordonnées random sont dans l'array,
+// on continue à en générer,on peut aussi se servir du missed array de l'objet de préférence
 
 
 

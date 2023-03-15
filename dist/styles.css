@@ -30,7 +30,9 @@ body {
 }
 
 div[class^='c'], div[class*=' c']{
-    border: solid
+    border: solid;
+    border-color: black;
+
 }
 div[class^='d'], div[class*=' d']{
     border: solid;
