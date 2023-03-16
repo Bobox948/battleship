@@ -1,5 +1,5 @@
 body {
-    font-size: 90px;
+    font-size: 66px;
    background-color: lightseagreen;
 
 }
@@ -9,8 +9,8 @@ body {
 
     display: grid;
    
-    grid-template-columns: 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px;
-    grid-template-rows:  100px 100px 100px 100px 100px 100px 100px 100px 100px 100px;
+    grid-template-columns: 75px 75px 75px 75px 75px 75px 75px 75px 75px 75px;
+    grid-template-rows:  75px 75px 75px 75px 75px 75px 75px 75px 75px 75px;
 
    border : solid;
     
@@ -21,8 +21,8 @@ body {
 
     display: grid;
    
-    grid-template-columns: 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px;
-    grid-template-rows:  100px 100px 100px 100px 100px 100px 100px 100px 100px 100px;
+    grid-template-columns: 75px 75px 75px 75px 75px 75px 75px 75px 75px 75px;
+    grid-template-rows:  75px 75px 75px 75px 75px 75px 75px 75px 75px 75px;
 
    border : solid;
     
