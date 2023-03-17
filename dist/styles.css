@@ -13,10 +13,18 @@ body {
     grid-template-rows:  75px 75px 75px 75px 75px 75px 75px 75px 75px 75px;
 
    border : solid;
-    
+
+    margin-right: 50px;
     
 }
 
+img{
+
+    background-color: rgb(64,64,64);
+    width: 75px;
+    height: 75px
+
+}
 .grid2{
 
     display: grid;
@@ -29,15 +37,21 @@ body {
     
 }
 
-div[class^='c'], div[class*=' c']{
+div[class^='c'], div[class*=' c']{ /* css styling for the divs which class starts with c */
     border: solid;
-    border-color: black;
-
+    border-color:white;
+    border-width: 1px;
+    background-color: rgb(0,191,255);
+    color:rgb(64,64,64);
 }
-div[class^='d'], div[class*=' d']{
+div[class^='d'], div[class*=' d']{ /* css styling for the divs which class starts with d */
     border: solid;
-    border-color: black;
-    color: lightseagreen;
+    border-color:white;
+    color: rgb(0,191,255);
+    border-width: 1px;
+    background-color: rgb(0,191,255);
+
+
 }
 
 .mid{
@@ -81,3 +95,50 @@ h1{
     font-size: 65px;
     margin: 10px;
 }
+
+@media only screen and (max-width: 1500px) {
+
+    body {
+        font-size: 22.5px;
+    
+    }
+
+    .mid{
+        display: flex;
+        flex-direction: column; /* flex direction column (display block) for mobiles and small devices */
+    }
+    .grid1{
+
+        margin-bottom: 10px;
+    display: grid;
+   
+    grid-template-columns: 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px;
+    grid-template-rows:  25px 25px 25px 25px 25px 25px 25px 25px 25px 25px;
+
+   margin-left: 50px;
+
+    
+}
+
+img{
+
+    background-color: rgb(64,64,64);
+    width: 25px;
+    height: 25px;
+
+}
+.grid2{
+
+    display: grid;
+   
+    grid-template-columns: 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px;
+    grid-template-rows:  25px 25px 25px 25px 25px 25px 25px 25px 25px 25px;
+
+    
+    
+}
+
+
+
+
+  }

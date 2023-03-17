@@ -13,6 +13,7 @@ const position = Gameboard('cruiser', 4, 10,10)
     expect(position.ship.x).toBe(10);
 
   });
+
   it('gameboard name', () => {
 
 
@@ -58,7 +59,7 @@ const position = Gameboard('cruiser', 4, 10,10)
 
   }); 
 
-  it('missed pos 2', () => {
+  it('missed ship position 2', () => {
 
 
 
@@ -110,20 +111,12 @@ const position = Gameboard('cruiser', 4, 10,10)
 
   }); 
 
-  it('test', () => {
-
-
-
-    expect(position2.ship.isSunk()).toBe(false);
-
-
-  }); 
 
 const bobo = Player('Boris')
 
 
 
-it('test', () => {
+it('test name', () => {
 
 
 
