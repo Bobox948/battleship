@@ -1,5 +1,5 @@
 body {
-    font-size: 66px;
+    font-size: 50px;
    background-color: lightseagreen;
 
 }
@@ -9,8 +9,8 @@ body {
 
     display: grid;
    
-    grid-template-columns: 75px 75px 75px 75px 75px 75px 75px 75px 75px 75px;
-    grid-template-rows:  75px 75px 75px 75px 75px 75px 75px 75px 75px 75px;
+    grid-template-columns: 66px 66px 66px 66px 66px 66px 66px 66px 66px 66px;
+    grid-template-rows:  66px 66px 66px 66px 66px 66px 66px 66px 66px 66px;
 
    border : solid;
 
@@ -21,16 +21,16 @@ body {
 img{
 
     background-color: rgb(64,64,64);
-    width: 75px;
-    height: 75px
+    width: 66px;
+    height: 66px
 
 }
 .grid2{
 
     display: grid;
    
-    grid-template-columns: 75px 75px 75px 75px 75px 75px 75px 75px 75px 75px;
-    grid-template-rows:  75px 75px 75px 75px 75px 75px 75px 75px 75px 75px;
+    grid-template-columns: 66px 66px 66px 66px 66px 66px 66px 66px 66px 66px;
+    grid-template-rows:  66px 66px 66px 66px 66px 66px 66px 66px 66px 66px;
 
    border : solid;
     
@@ -96,7 +96,7 @@ h1{
     margin: 10px;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1350px) {
 
     body {
         font-size: 22.5px;
@@ -116,7 +116,7 @@ h1{
     grid-template-rows:  25px 25px 25px 25px 25px 25px 25px 25px 25px 25px;
 
    margin-left: 50px;
-
+   border-color : lightseagreen;
     
 }
 
@@ -133,7 +133,7 @@ img{
    
     grid-template-columns: 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px;
     grid-template-rows:  25px 25px 25px 25px 25px 25px 25px 25px 25px 25px;
-
+    border-color : lightseagreen;
     
     
 }
